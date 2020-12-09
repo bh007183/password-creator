@@ -1,6 +1,12 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+
 //Main function
+function generatePassword() {
+  return "password"
+}
+
+  // How long should password be?
+  
+
 
    
 
@@ -15,7 +21,8 @@ var generateBtn = document.querySelector("#generate");
 // at least one charector that user selects from each catigory must be used.
 //TODO:generat password matching above specifications.
 
-
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -23,6 +30,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  
 
 }
 
