@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCRIpt>
+    var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"] 
+    var numeric = ["0","1","2","3","4","5","6","7","8","9"]
+    var specialChar = ["!","@","#","$","%","^","&","*","+","="]
+    var password = []
+    
+     
+            
+  // How long should password be?
+
+
+        
+        var numberGiven = prompt("How long would you like the password? It must be between 8 and 128")
+        var questionLower = confirm("Would you like lower case letters in your password? If yes, click OK, if no, click cancel");
+        var questionSpecial = confirm("Would you like special charectors in your password? If yes, click OK, if no, click cancel");
+        var questionUpper = confirm("Would you like upper case letters in your password? If yes, click OK, if no, click cancel");
+        var questionNumeric = confirm("Would you like upper numbers in your password? If yes, click OK, if no, click cancel");
+        
+        while (password.length <= numberGiven){
+
+        if (password.length = numberGiven){
+            break; console.log(password) 
+        }
+        
+        if (questionLower === true){
+            lower = Math.floor(Math.random() * lowerCase.length);
+            lowerPass = lowerCase[lower]
+            password.push(lowerPass)
+        }
+        if (questionUpper === true){
+            upper = Math.floor(Math.random() * upperCase.length);
+            upperPass = upperCase[upper]
+            password.push(upperPass)
+        }
+        if (questionNumeric === true){
+            number = Math.floor(Math.random() * numeric.length)
+            numberPass = numeric[number]
+            password.push(numberPass)
+        }
+            
+        if (questionSpecial === true){
+            special = Math.floor(Math.random() * specialChar.length)
+            specialPass = specialChar[special]
+            password.push(specialPass)
+        }
+        
+    }
+        
+    console.log(password)
+    
+        
+            
+            
+        
+            
+            
+        
+
+        
+
+
+        
+
+        
+
+        
+    
+    
+
+
+  
+
+        
+ 
+    </SCRIpt>
+</body>
+</html>
