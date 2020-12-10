@@ -6,10 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <SCRIpt>
-        TODO: // if numberGiven not vallid, prompt again.
-        TODO:// link in to javascript file.
-        TODO:// make loop stop when exacly at given number.
+    <Script>
+         // if numberGiven not vallid, prompt again.
+
+       // link in to javascript file.
+
+        // make loop stop when exacly at given number.
+
         // Arrays of characters to draw from and empty array to add to.
         var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
         var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"] 
@@ -18,9 +21,20 @@
         var compile = []
         
         // User interface variables.
+        
         var numberGiven = prompt("How long would you like the password? It must be between 8 and 128 (inclusive).");
         
-        console.log(numberGiven)
+        if (numberGiven >= 8 && numberGiven <= 128){
+          
+            
+
+            
+        
+
+        
+        
+        
+        
         var questionLower = confirm("Would you like lower case letters in your password? If yes, click OK, if no, click cancel");
         var questionSpecial = confirm("Would you like special charectors in your password? If yes, click OK, if no, click cancel");
         var questionUpper = confirm("Would you like upper case letters in your password? If yes, click OK, if no, click cancel");
@@ -28,13 +42,17 @@
         
         //Loop for adding characters requested to above empty array.
         
-        while(compile <= numberGiven){
+        while(compile.length < numberGiven){
 
         
         if (questionLower === true){
             lower = Math.floor(Math.random() * lowerCase.length);
             lowerPass = lowerCase[lower]
-            compile.push(lowerPass)
+            if (compile.length < numberGiven){         
+                compile.push(lowerPass)
+            }
+                
+            
             }
             
             
@@ -43,7 +61,9 @@
         if (questionUpper === true){
             upper = Math.floor(Math.random() * upperCase.length);
             upperPass = upperCase[upper]
-            compile.push(upperPass)
+            if (compile.length < numberGiven){         
+                compile.push(upperPass)
+                }
             }
             
             
@@ -52,7 +72,9 @@
         if (questionNumeric === true){
             number = Math.floor(Math.random() * numeric.length)
             numberPass = numeric[number]
-            compile.push(numberPass)
+            if (compile.length < numberGiven){         
+                compile.push(numberPass)
+                }
             }   
             
         
@@ -60,20 +82,25 @@
         if (questionSpecial === true){
             special = Math.floor(Math.random() * specialChar.length)
             specialPass = specialChar[special]
-            compile.push(specialPass)
-            }
+            if (compile.length < numberGiven){         
+                compile.push(specialPass)
+                }
+        }
+        }
             
         
 
             
 
-    }   // New variable with combined "compile" array.
+       // New variable with combined "compile" array.
         
         var password = compile.join("")   
-        console.log(password)
+        console.log(password);
     
     
-        
+        } else {
+            alert("Invalid entry!")
+        }
             
             
         
@@ -97,6 +124,6 @@
 
         
  
-    </SCRIpt>
+    </Script>
 </body>
 </html>
